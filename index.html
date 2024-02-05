@@ -26,8 +26,9 @@
 
         <div class="bg-light-subtle p-3 rounded w-25 d-flex flex-column"> 
             <button class="btn btn-danger mb-3" @click="generaEmail">Genera Email</button>
-            <ul>
-                <li v-for="(item, index) in arrayEmail" :key="index">
+            <ul class="list-group">
+                <li v-for="(item, index) in arrayEmail" :key="index"
+                :class="(arrayEmail.length > 9) ? 'list-group-item' : 'd-none'">
                     {{item}}
                 </li>
             </ul>
